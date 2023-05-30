@@ -25,6 +25,12 @@ await esbuild.build({
     htmlPlugin({
       outfile: `index.html`,
 
+      createHeadElements: () => [
+        `<meta charset="utf-8" />`,
+        `<meta name="viewport" content="width=device-width, initial-scale=1" />`,
+        `<title>Example</title>`,
+      ],
+
       createBodyElements: (outputUrls) =>
         outputUrls
           .filter((outputUrl) => outputUrl.endsWith(`.js`))
