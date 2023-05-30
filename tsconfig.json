@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "noEmit": true,
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "lib"
+  ],
+  "extends": [
+    "./tsconfig.base.json"
+  ],
+  "include": [
+    "**/*"
+  ]
+}
