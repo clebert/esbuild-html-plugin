@@ -1,8 +1,10 @@
 # esbuild-html-plugin
 
-> An esbuild plugin that generates an HTML file by providing access to the
-> output URLs of the bundled assets while allowing customization of head and
-> body elements. Minification is controlled by esbuild's `minify` option.
+> An esbuild plugin that generates an HTML file.
+
+This esbuild plugin allows the creation of an HTML file featuring output URLs of
+bundled assets, while supporting customization of head and body elements. The
+esbuild's `minify` option handles minification.
 
 ## Installation
 
@@ -10,7 +12,7 @@
 npm install esbuild-html-plugin
 ```
 
-## Usage
+## Usage Example
 
 ```js
 import * as esbuild from 'esbuild';
