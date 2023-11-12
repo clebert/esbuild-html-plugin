@@ -1,6 +1,6 @@
 {
   "name": "esbuild-html-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An esbuild plugin that generates an HTML file.",
   "repository": {
     "type": "git",
