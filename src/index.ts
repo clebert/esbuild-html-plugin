@@ -1,8 +1,8 @@
-import type {Plugin} from 'esbuild';
+import type { Plugin } from 'esbuild';
 
-import {minify} from 'html-minifier';
-import {writeFile} from 'node:fs/promises';
-import {dirname, join, relative} from 'node:path';
+import { minify } from 'html-minifier';
+import { writeFile } from 'node:fs/promises';
+import { dirname, join, relative } from 'node:path';
 
 export interface HtmlPluginOptions {
   /**
@@ -20,17 +20,13 @@ export interface HtmlPluginOptions {
    * A function that receives the output URLs of the bundled assets and returns
    * an array of strings representing the custom head elements.
    */
-  readonly createHeadElements?: (
-    outputUrls: readonly string[],
-  ) => readonly string[];
+  readonly createHeadElements?: (outputUrls: readonly string[]) => readonly string[];
 
   /**
    * A function that receives the output URLs of the bundled assets and returns
    * an array of strings representing the custom body elements.
    */
-  readonly createBodyElements?: (
-    outputUrls: readonly string[],
-  ) => readonly string[];
+  readonly createBodyElements?: (outputUrls: readonly string[]) => readonly string[];
 }
 
 export function htmlPlugin({
@@ -43,7 +39,7 @@ export function htmlPlugin({
     name: `esbuild-html-plugin`,
 
     setup(build) {
-      const {initialOptions: options} = build;
+      const { initialOptions: options } = build;
 
       options.metafile = true;
 
@@ -51,9 +47,9 @@ export function htmlPlugin({
         const outdir = options.outdir ?? dirname(options.outfile!);
         const publicPath = options.publicPath || `/`;
 
-        const outputUrls = (
-          result.metafile ? Object.keys(result.metafile.outputs) : []
-        ).map((outputName) => join(publicPath, relative(outdir, outputName)));
+        const outputUrls = (result.metafile ? Object.keys(result.metafile.outputs) : []).map(
+          (outputName) => join(publicPath, relative(outdir, outputName)),
+        );
 
         const html = [
           `<!DOCTYPE html>`,
@@ -81,7 +77,7 @@ export function htmlPlugin({
             removeScriptTypeAttributes: true,
             removeStyleLinkTypeAttributes: true,
           }),
-          {encoding: `utf-8`},
+          { encoding: `utf-8` },
         );
       });
     },

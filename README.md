@@ -2,9 +2,9 @@
 
 > An esbuild plugin that generates an HTML file.
 
-This esbuild plugin allows the creation of an HTML file featuring output URLs of
-bundled assets, while supporting customization of head and body elements. The
-esbuild's `minify` option handles minification.
+This esbuild plugin allows the creation of an HTML file featuring output URLs of bundled assets,
+while supporting customization of head and body elements. The esbuild's `minify` option handles
+minification.
 
 ## Installation
 
@@ -46,8 +46,8 @@ await esbuild.build({
 
 ### `outfile` (required)
 
-The output file's name for the generated HTML. This name will be combined with
-the `outdir` or the dirname of the `outfile` from the esbuild options.
+The output file's name for the generated HTML. This name will be combined with the `outdir` or the
+dirname of the `outfile` from the esbuild options.
 
 ```
 {
@@ -67,8 +67,8 @@ The language attribute for the HTML tag.
 
 ### `createHeadElements` (optional)
 
-A function that receives the output URLs of the bundled assets and returns an
-array of strings representing the custom head elements.
+A function that receives the output URLs of the bundled assets and returns an array of strings
+representing the custom head elements.
 
 ```
 {
@@ -81,8 +81,8 @@ array of strings representing the custom head elements.
 
 ### `createBodyElements` (optional)
 
-A function that receives the output URLs of the bundled assets and returns an
-array of strings representing the custom body elements.
+A function that receives the output URLs of the bundled assets and returns an array of strings
+representing the custom body elements.
 
 ```
 {

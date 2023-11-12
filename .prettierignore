@@ -1,8 +1,8 @@
 /.prettierrc.json
 /LICENSE*
 /.eslintrc.json
-/package-lock.json
 /.github/workflows/ci.yml
+/package-lock.json
 /tsconfig.base.json
 /tsconfig.json
 /lib
