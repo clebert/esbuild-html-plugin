@@ -1,6 +1,5 @@
 import type { Plugin } from 'esbuild';
 
-import { minify } from 'html-minifier';
 import { writeFile } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 
@@ -63,22 +62,7 @@ export function htmlPlugin({
           `</html>`,
         ].join(`\n`);
 
-        await writeFile(
-          join(outdir, outfile),
-          minify(html, {
-            caseSensitive: true,
-            collapseWhitespace: true,
-            conservativeCollapse: true,
-            decodeEntities: true,
-            keepClosingSlash: true,
-            minifyCSS: options.minify,
-            minifyJS: options.minify,
-            removeComments: options.minify,
-            removeScriptTypeAttributes: true,
-            removeStyleLinkTypeAttributes: true,
-          }),
-          { encoding: `utf-8` },
-        );
+        await writeFile(join(outdir, outfile), html, { encoding: `utf-8` });
       });
     },
   };

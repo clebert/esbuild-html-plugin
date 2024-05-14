@@ -3,8 +3,7 @@
 > An esbuild plugin that generates an HTML file.
 
 This esbuild plugin allows the creation of an HTML file featuring output URLs of bundled assets,
-while supporting customization of head and body elements. The esbuild's `minify` option handles
-minification.
+while supporting customization of head and body elements.
 
 ## Installation
 
@@ -20,7 +19,6 @@ import * as esbuild from 'esbuild';
 await esbuild.build({
   entryPoints: [`app.ts`],
   bundle: true,
-  minify: true,
   outdir: `dist`,
   publicPath: `/static`,
   plugins: [

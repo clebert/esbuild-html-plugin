@@ -27,17 +27,16 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.codeActionsOnSave": {
-    "source.addMissingImports": true,
-    "source.fixAll.eslint": true
+    "source.addMissingImports": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "editor.formatOnSave": true,
   "editor.rulers": [
     100
   ],
+  "eslint.experimental.useFlatConfig": true,
   "files.exclude": {
     ".editorconfig": true,
-    ".eslintignore": true,
-    ".eslintrc.json": true,
     ".github": true,
     ".github/workflows/ci.yml": true,
     ".gitignore": true,
@@ -50,7 +49,6 @@
     "ci.sh": true,
     "tsconfig.base.json": true,
     "tsconfig.emit.json": true,
-    "tsconfig.eslint.json": true,
     "tsconfig.json": true
   },
   "json.schemaDownload.enable": true,

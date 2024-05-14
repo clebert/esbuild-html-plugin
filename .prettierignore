@@ -1,12 +1,10 @@
 /.prettierrc.json
 /LICENSE*
-/.eslintrc.json
 /.github/workflows/ci.yml
 /package-lock.json
 /tsconfig.base.json
 /tsconfig.json
 /lib
 /tsconfig.emit.json
-/tsconfig.eslint.json
 /.vscode/extensions.json
 /.vscode/settings.json

@@ -9,8 +9,9 @@
   "license": "MIT",
   "author": "Clemens Akens",
   "type": "module",
-  "exports": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": "./lib/index.js"
+  },
   "files": [
     "lib"
   ],
@@ -23,20 +24,11 @@
     "release": "npm version",
     "postrelease": "git push --follow-tags"
   },
-  "dependencies": {
-    "html-minifier": "^4.0.0"
-  },
   "devDependencies": {
-    "@types/html-minifier": "^4.0.5",
-    "@types/node": "^20.9.0",
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@typescript-eslint/parser": "^6.10.0",
-    "esbuild": "^0.19.5",
-    "eslint": "^8.53.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-markdown": "^3.0.1",
-    "prettier": "^3.0.3",
-    "typescript": "^5.2.2"
+    "@types/node": "^20.12.12",
+    "onecfg-lib-eslint": "^1.1.0",
+    "esbuild": "^0.21.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
   }
 }
